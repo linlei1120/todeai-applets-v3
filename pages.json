@@ -7,7 +7,7 @@
 	}, {
 		"path": "pages/index",
 		"style": {
-			"navigationBarTitleText": "若依移动端框架",
+			"navigationBarTitleText": "移动端框架",
 			"navigationStyle": "custom"
 		}
 	}, {
@@ -94,6 +94,11 @@
 		"path": "pages/wxExample/wxDevice/simple",
 		"style": {
 			"navigationBarTitleText": "简单模块"
+		}
+	}, {
+		"path": "pages/wxExample/share",
+		"style": {
+			"navigationBarTitleText": "转发分享"
 		}
 	}],
 	"tabBar": {
