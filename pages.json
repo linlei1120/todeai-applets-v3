@@ -7,7 +7,7 @@
 	}, {
 		"path": "pages/index",
 		"style": {
-			"navigationBarTitleText": "若依移动端框架",
+			"navigationBarTitleText": "移动端框架",
 			"navigationStyle": "custom"
 		}
 	}, {
