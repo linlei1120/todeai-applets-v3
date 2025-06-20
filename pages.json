@@ -106,6 +106,9 @@
 		"style": {
 			"navigationBarTitleText": "转发分享"
 		}
+	}, {
+		"path": "pages/cases/animateLoading",
+		"style": {}
 	}],
 	"tabBar": {
 		"color": "#000000",
@@ -113,11 +116,6 @@
 		"borderStyle": "white",
 		"backgroundColor": "#ffffff",
 		"list": [{
-			"pagePath": "pages/index",
-			"iconPath": "static/images/tabbar/home.png",
-			"selectedIconPath": "static/images/tabbar/home_.png",
-			"text": "首页"
-		}, {
 			"pagePath": "pages/work/wxIndex",
 			"iconPath": "static/images/tabbar/work.png",
 			"selectedIconPath": "static/images/tabbar/work_.png",
