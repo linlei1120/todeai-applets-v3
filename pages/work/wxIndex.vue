@@ -11,9 +11,6 @@
 				</view>
 			</view>
 		</view>
-		<view class="box rotate-animation"></view>
-		<view class="box rotateX-animation"></view>
-		<view class="box rotateY-animation"></view>
 		<u-top-tips ref="uTips"></u-top-tips>
 	</view>
 </template>
@@ -31,10 +28,10 @@ const list = reactive([
 	},
 	{
 		id: 2,
-		title: "转发分享",
+		title: "ai抽签",
 		des: "解你困惑，知你烦恼",
 		img: "/static/img/nav/bill-sel.png",
-		path: "/pages/wxExample/share",
+		path: "/pages/cases/appletsSway",
 		type: "URL"
 	},
 	{
@@ -60,6 +57,14 @@ const list = reactive([
 		img: "/static/img/nav/bill-sel.png",
 		path: "/pages/cases/shareMoudel",
 		type: "URL"
+	},
+	{
+		id: 6,
+		title: "跳转相关API",
+		des: "解你困惑，知你烦恼",
+		img: "/static/img/nav/bill-sel.png",
+		path: "/pages/cases/navigateModule",
+		type: "URL"
 	}
 ]);
 const handleJump = (item) => {
@@ -67,7 +72,7 @@ const handleJump = (item) => {
 	switch (item.type) {
 		case "URL":
 			uni.navigateTo({
-				url: item.path + "?id=" + item.id + "&price=" + item.price + "&title=" + item.title
+				url: item.path
 			});
 			break;
 		case "WEAPP":
@@ -83,6 +88,98 @@ const handleJump = (item) => {
 			break;
 	}
 };
+// const globalData = getApp().globalData;
+// export default {
+// 	components: {},
+// 	data() {
+// 		return {
+// 			userInfo: null,
+// 			list: [
+// 				{
+// 					id: 1,
+// 					title: "ai问答",
+// 					des: "解你困惑，知你烦恼",
+// 					img: "/static/img/nav/bill-sel.png",
+// 					path: "/pages/index/aiChat",
+// 					type: "URL"
+// 				},
+// 				{
+// 					id: 2,
+// 					title: "ai抽签",
+// 					des: "解你困惑，知你烦恼",
+// 					img: "/static/img/nav/bill-sel.png",
+// 					path: "/pages/cases/appletsSway",
+// 					type: "URL"
+// 				},
+// 				{
+// 					id: 3,
+// 					title: "陀螺仪",
+// 					des: "解你困惑，知你烦恼",
+// 					img: "/static/img/nav/bill-sel.png",
+// 					path: "/pages/cases/gyroscope",
+// 					type: "URL"
+// 				},
+// 				{
+// 					id: 4,
+// 					title: "自定义字体",
+// 					des: "解你困惑，知你烦恼",
+// 					img: "/static/img/nav/bill-sel.png",
+// 					path: "/pages/cases/fontCustom",
+// 					type: "URL"
+// 				},
+// 				{
+// 					id: 5,
+// 					title: "小程序转发",
+// 					des: "解你困惑，知你烦恼",
+// 					img: "/static/img/nav/bill-sel.png",
+// 					path: "/pages/cases/shareMoudel",
+// 					type: "URL"
+// 				}
+// 			]
+// 		};
+// 	},
+// 	onLoad() {
+// 		this.userInfo = this.getLoginUserInfo();
+// 	},
+// 	onShareAppMessage: function () {
+// 		let uid = this.userInfo ? this.userInfo.uid : 0;
+// 		return {
+// 			title: "我正在使用" + globalData.appName + ",ai问答,ai绘画...它帮我解决了日常生活中的很多问题,你也快来试试吧~",
+// 			imageUrl: "/static/logo.png",
+// 			path: "/pages/index/index?pid=" + uid
+// 		};
+// 	},
+// 	onShareTimeline: function () {
+// 		let uid = this.userInfo ? this.userInfo.uid : 0;
+// 		return {
+// 			title: "我正在使用" + globalData.appName + ",ai问答,ai绘画...它帮我解决了日常生活中的很多问题,你也快来试试吧~",
+// 			imageUrl: "/static/logo.png",
+// 			path: "/pages/index/index?pid=" + uid
+// 		};
+// 	},
+// 	methods: {
+// 		handleJump(item) {
+// 			switch (item.type) {
+// 				case "URL":
+// 					uni.navigateTo({
+// 						url: item.path + "?id=" + item.id + "&price=" + item.price + "&title=" + item.title
+// 					});
+// 					break;
+// 				case "WEAPP":
+// 					uni.navigateToMiniProgram({
+// 						appId: item.appid,
+// 						path: item.path
+// 					});
+// 					break;
+// 				case "WEBVIEW":
+// 					uni.navigateTo({
+// 						url: "/pages/main/webview/webview?url=" + encodeURIComponent(item.path)
+// 					});
+// 					break;
+// 			}
+// 		}
+// 	}
+// };
 </script>
 
 <style lang="scss" scoped>
@@ -163,59 +260,6 @@ page {
 				width: 60rpx;
 			}
 		}
-	}
-}
-
-.box {
-	width: 100rpx;
-	height: 100rpx;
-	background-color: aqua;
-}
-
-/* 悬停时的动画 */
-.rotate-animation {
-	animation: rotate 1s linear infinite;
-}
-
-/* 悬停时的动画 */
-.rotateX-animation {
-	animation: rotateX 1s linear infinite;
-}
-
-.rotateY-animation {
-	animation: rotateY 1s linear infinite;
-}
-
-/* 定义旋转动画 */
-@keyframes rotate {
-	0% {
-		transform: rotate(0deg);
-	}
-
-	100% {
-		transform: rotate(360deg);
-	}
-}
-
-/* 定义旋转动画 */
-@keyframes rotateX {
-	0% {
-		transform: rotateX(0deg);
-	}
-
-	100% {
-		transform: rotateX(360deg);
-	}
-}
-
-/* 定义旋转动画 */
-@keyframes rotateY {
-	0% {
-		transform: rotateY(0deg);
-	}
-
-	100% {
-		transform: rotateY(360deg);
 	}
 }
 </style>
