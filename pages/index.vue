@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
-		<image class="logo" src="@/static/logo.png"></image>
-		<view class="text-area">
+		<!-- <image class="logo" src="@/static/logo.png"></image> -->
+		<view class="text-area" v-if="false">
 			<view class="menu">
 				<view class="menu-card" v-for="(item, index) in menuList" :key="index" @tap="navPages(item)">{{ item.title }}</view>
 			</view>
@@ -12,6 +12,7 @@
 import { ref } from "vue";
 const menuList = ref([
 	{ id: 0, title: "设备接口", path: "/pages/wxExample/device" },
+	{ id: 7, title: "加载动画", path: "/pages/cases/animateLoading" },
 	{ id: 1, title: "百度语音识别", path: "/pages/cases/detectShake" },
 	{ id: 2, title: "海报生成", path: "/pages/cases/detectShake" },
 	{ id: 3, title: "设备晃动监听", path: "/pages/cases/detectShake" },
