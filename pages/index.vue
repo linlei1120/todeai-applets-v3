@@ -2,6 +2,7 @@
 	<view class="content">
 		<!-- <image class="logo" src="@/static/logo.png"></image> -->
 		<view class="text-area" v-if="false">
+
 			<view class="menu">
 				<view class="menu-card" v-for="(item, index) in menuList" :key="index" @tap="navPages(item)">
 					{{ item.title }}
