@@ -81,6 +81,12 @@
 			"navigationBarTitleText": "晃动检测"
 		}
 	}, {
+		"path": "pages/cases/navigateModule",
+		"style": {
+			"navigationBarTitleText": "跳转相关API"
+		}
+	}, 
+	{
 		"path": "pages/wxExample/device",
 		"style": {
 			"navigationBarTitleText": "设备接口"

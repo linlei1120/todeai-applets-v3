@@ -57,6 +57,14 @@ const list = reactive([
 		img: "/static/img/nav/bill-sel.png",
 		path: "/pages/cases/shareMoudel",
 		type: "URL"
+	},
+	{
+		id: 6,
+		title: "跳转相关API",
+		des: "解你困惑，知你烦恼",
+		img: "/static/img/nav/bill-sel.png",
+		path: "/pages/cases/navigateModule",
+		type: "URL"
 	}
 ]);
 const handleJump = (item) => {
@@ -64,7 +72,7 @@ const handleJump = (item) => {
 	switch (item.type) {
 		case "URL":
 			uni.navigateTo({
-				url: item.path + "?id=" + item.id + "&price=" + item.price + "&title=" + item.title
+				url: item.path
 			});
 			break;
 		case "WEAPP":
