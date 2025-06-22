@@ -1,5 +1,6 @@
 {
-	"pages": [{
+	"pages": [
+		{
 			"path": "pages/work/wxIndex",
 			"style": {
 				"navigationBarTitleText": "WX工具"
@@ -103,6 +104,12 @@
 			}
 		},
 		{
+			"path": "pages/cases/chat",
+			"style": {
+				"navigationBarTitleText": "聊天工具API"
+			}
+		},
+		{
 			"path": "pages/wxExample/device",
 			"style": {
 				"navigationBarTitleText": "设备接口"
@@ -121,15 +128,9 @@
 			}
 		},
 		{
-			"path": "pages/wxExample/wxShare",
+			"path": "pages/wxExample/share",
 			"style": {
 				"navigationBarTitleText": "转发分享"
-			}
-		},
-		{
-			"path": "pages/wxExample/wxNavigate",
-			"style": {
-				"navigationBarTitleText": "路由导航"
 			}
 		},
 		{
@@ -142,7 +143,8 @@
 		"selectedColor": "#000000",
 		"borderStyle": "white",
 		"backgroundColor": "#ffffff",
-		"list": [{
+		"list": [
+			{
 				"pagePath": "pages/work/wxIndex",
 				"iconPath": "static/images/tabbar/work.png",
 				"selectedIconPath": "static/images/tabbar/work_.png",
@@ -166,5 +168,42 @@
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "TodeAI",
 		"navigationBarBackgroundColor": "#FFFFFF"
+	},
+	"subPackages": [
+		{
+			"root": "packageA",
+			"name": "chatTools",
+
+			"pages": [
+				{
+					"path": "pages/cases/chat",
+					"style": {
+						"navigationBarTitleText": "聊天工具API"
+					}
+				}
+			],
+			"independent": true,
+			"componentFramework": "glass-easel",
+			"renderer": "skyline"
+		}
+	],
+	"lazyCodeLoading": "requiredComponents",
+	"chatTools": [
+		{
+			"root": "packageA",
+			"entryPagePath": "pages/cases/chat",
+			"desc": "群聊助手 - 提供图片、视频、文件分享等功能",
+			"scopes": ["scope.userLocation"]
+		}
+	],
+	"rendererOptions": {
+		"skyline": {
+			"disableABTest": true,
+			"defaultDisplayBlock": true,
+			"defaultContentBox": true,
+			"tagNameStyleIsolation": "legacy",
+			"sdkVersionBegin": "3.7.8",
+			"sdkVersionEnd": "15.255.255"
+		}
 	}
 }

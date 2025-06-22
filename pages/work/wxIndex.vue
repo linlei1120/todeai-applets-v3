@@ -22,39 +22,22 @@
 	} from "vue";
 	const list = reactive([{
 			id: 1,
-			title: "小程序转发",
-			des: "解你困惑，知你烦恼",
-			img: "/static/img/nav/bill-sel.png",
-			path: "/pages/wxExample/share",
-			type: "URL"
-		},
-		{
-			id: 2,
-			title: "跳转相关API",
-			des: "解你困惑，知你烦恼",
-			img: "/static/img/nav/bill-sel.png",
-			path: "/pages/cases/navigateModule",
-			type: "URL"
-		},
-		{
-			id: 3,
-			title: "路由跳转",
-			des: "解你困惑，知你烦恼",
-			img: "/static/img/nav/bill-sel.png",
-			path: "/pages/wxExample/wxNavigate",
-			type: "URL"
-		},
-		{
-			id: 4,
 			title: "设备API",
 			des: "解你困惑，知你烦恼",
 			img: "/static/img/nav/bill-sel.png",
 			path: "/pages/wxExample/device",
 			type: "URL"
 		},
-
 		{
-			id: 5,
+			id: 2,
+			title: "ai抽签",
+			des: "解你困惑，知你烦恼",
+			img: "/static/img/nav/bill-sel.png",
+			path: "/pages/cases/appletsSway",
+			type: "URL"
+		},
+		{
+			id: 3,
 			title: "陀螺仪",
 			des: "解你困惑，知你烦恼",
 			img: "/static/img/nav/bill-sel.png",
@@ -62,11 +45,35 @@
 			type: "URL"
 		},
 		{
-			id: 6,
+			id: 4,
 			title: "自定义字体",
 			des: "解你困惑，知你烦恼",
 			img: "/static/img/nav/bill-sel.png",
 			path: "/pages/cases/fontCustom",
+			type: "URL"
+		},
+		{
+			id: 5,
+			title: "小程序转发",
+			des: "解你困惑，知你烦恼",
+			img: "/static/img/nav/bill-sel.png",
+			path: "/pages/cases/shareMoudel",
+			type: "URL"
+		},
+		{
+			id: 6,
+			title: "跳转相关API",
+			des: "解你困惑，知你烦恼",
+			img: "/static/img/nav/bill-sel.png",
+			path: "/pages/cases/navigateModule",
+			type: "URL"
+		},
+		{
+			id: 7,
+			title: "聊天工具API",
+			des: "解你困惑，知你烦恼",
+			img: "/static/img/nav/bill-sel.png",
+			path: "/pages/cases/chat",
 			type: "URL"
 		}
 	]);
@@ -91,6 +98,8 @@
 				break;
 		}
 	};
+
+
 	// const globalData = getApp().globalData;
 	// export default {
 	// 	components: {},
