@@ -121,9 +121,15 @@
 			}
 		},
 		{
-			"path": "pages/wxExample/share",
+			"path": "pages/wxExample/wxShare",
 			"style": {
 				"navigationBarTitleText": "转发分享"
+			}
+		},
+		{
+			"path": "pages/wxExample/wxNavigate",
+			"style": {
+				"navigationBarTitleText": "路由导航"
 			}
 		},
 		{
