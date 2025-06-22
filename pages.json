@@ -1,115 +1,123 @@
 {
 	"pages": [{
-		"path": "pages/work/wxIndex",
-		"style": {
-			"navigationBarTitleText": "WX工具"
-		}
-	}, {
-		"path": "pages/index",
-		"style": {
-			"navigationBarTitleText": "移动端框架",
-			"navigationStyle": "custom"
-		}
-	}, {
-		"path": "pages/login",
-		"style": {
-			"navigationBarTitleText": "登录"
-		}
-	}, {
-		"path": "pages/register",
-		"style": {
-			"navigationBarTitleText": "注册"
-		}
-	}, {
-		"path": "pages/work/index",
-		"style": {
-			"navigationBarTitleText": "工作台"
-		}
-	}, {
-		"path": "pages/mine/index",
-		"style": {
-			"navigationBarTitleText": "我的"
-		}
-	}, {
-		"path": "pages/mine/avatar/index",
-		"style": {
-			"navigationBarTitleText": "修改头像"
-		}
-	}, {
-		"path": "pages/mine/info/index",
-		"style": {
-			"navigationBarTitleText": "个人信息"
-		}
-	}, {
-		"path": "pages/mine/info/edit",
-		"style": {
-			"navigationBarTitleText": "编辑资料"
-		}
-	}, {
-		"path": "pages/mine/pwd/index",
-		"style": {
-			"navigationBarTitleText": "修改密码"
-		}
-	}, {
-		"path": "pages/mine/setting/index",
-		"style": {
-			"navigationBarTitleText": "应用设置"
-		}
-	}, {
-		"path": "pages/mine/help/index",
-		"style": {
-			"navigationBarTitleText": "常见问题"
-		}
-	}, {
-		"path": "pages/mine/about/index",
-		"style": {
-			"navigationBarTitleText": "关于我们"
-		}
-	}, {
-		"path": "pages/common/webview/index",
-		"style": {
-			"navigationBarTitleText": "浏览网页"
-		}
-	}, {
-		"path": "pages/common/textview/index",
-		"style": {
-			"navigationBarTitleText": "浏览文本"
-		}
-	}, {
-		"path": "pages/cases/detectShake",
-		"style": {
-			"navigationBarTitleText": "晃动检测"
-		}
-	}, {
-		"path": "pages/cases/navigateModule",
-		"style": {
-			"navigationBarTitleText": "跳转相关API"
-		}
-	}, 
-	{
-		"path": "pages/wxExample/device",
-		"style": {
-			"navigationBarTitleText": "设备接口"
-		}
-	}, {
-		"path": "pages/wxExample/wxDevice/vibrate",
-		"style": {
-			"navigationBarTitleText": "振动"
-		}
-	}, {
-		"path": "pages/wxExample/wxDevice/simple",
-		"style": {
-			"navigationBarTitleText": "简单模块"
-		}
-	}, {
-		"path": "pages/wxExample/share",
-		"style": {
-			"navigationBarTitleText": "转发分享"
-		}
-	}, {
+			"path": "pages/work/wxIndex",
+			"style": {
+				"navigationBarTitleText": "WX工具"
+			}
+		}, {
+			"path": "pages/index",
+			"style": {
+				"navigationBarTitleText": "移动端框架",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/login",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		}, {
+			"path": "pages/register",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
+		}, {
+			"path": "pages/work/index",
+			"style": {
+				"navigationBarTitleText": "工作台"
+			}
+		}, {
+			"path": "pages/mine/index",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		}, {
+			"path": "pages/mine/avatar/index",
+			"style": {
+				"navigationBarTitleText": "修改头像"
+			}
+		}, {
+			"path": "pages/mine/info/index",
+			"style": {
+				"navigationBarTitleText": "个人信息"
+			}
+		}, {
+			"path": "pages/mine/info/edit",
+			"style": {
+				"navigationBarTitleText": "编辑资料"
+			}
+		}, {
+			"path": "pages/mine/pwd/index",
+			"style": {
+				"navigationBarTitleText": "修改密码"
+			}
+		}, {
+			"path": "pages/mine/setting/index",
+			"style": {
+				"navigationBarTitleText": "应用设置"
+			}
+		}, {
+			"path": "pages/mine/help/index",
+			"style": {
+				"navigationBarTitleText": "常见问题"
+			}
+		}, {
+			"path": "pages/mine/about/index",
+			"style": {
+				"navigationBarTitleText": "关于我们"
+			}
+		}, {
+			"path": "pages/common/webview/index",
+			"style": {
+				"navigationBarTitleText": "浏览网页"
+			}
+		}, {
+			"path": "pages/common/textview/index",
+			"style": {
+				"navigationBarTitleText": "浏览文本"
+			}
+		}, {
+			"path": "pages/cases/detectShake",
+			"style": {
+				"navigationBarTitleText": "晃动检测"
+			}
+		}, {
+			"path": "pages/cases/navigateModule",
+			"style": {
+				"navigationBarTitleText": "跳转相关API"
+			}
+		},
+		{
+			"path": "pages/cases/chat",
+			"style": {
+				"navigationBarTitleText": "聊天工具API"
+			}
+		},
+		{
+			"path": "pages/wxExample/device",
+			"style": {
+				"navigationBarTitleText": "设备接口"
+			}
+		}, {
+			"path": "pages/wxExample/wxDevice/vibrate",
+			"style": {
+				"navigationBarTitleText": "振动"
+			}
+		}, {
+			"path": "pages/wxExample/wxDevice/simple",
+			"style": {
+				"navigationBarTitleText": "简单模块"
+			}
+		}, {
+			"path": "pages/wxExample/share",
+			"style": {
+				"navigationBarTitleText": "转发分享"
+			}
+    },
+    {
 		"path": "pages/cases/animateLoading",
 		"style": {}
-	}],
+	}
+	],
 	"tabBar": {
 		"color": "#000000",
 		"selectedColor": "#000000",
@@ -136,5 +144,38 @@
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "TodeAI",
 		"navigationBarBackgroundColor": "#FFFFFF"
+	},
+	"subPackages": [{
+		"root": "packageA",
+		"name": "chatTools",
+
+		"pages": [{
+			"path": "pages/cases/chat",
+			"style": {
+				"navigationBarTitleText": "聊天工具API"
+			}
+		}],
+		"independent": true,
+		"componentFramework": "glass-easel",
+		"renderer": "skyline",
+		"lazyCodeLoading": "requiredComponents"
+	}],
+	"chatTools": [{
+		"root": "packageA",
+		"entryPagePath": "pages/cases/chat",
+		"desc": "群聊助手 - 提供图片、视频、文件分享等功能",
+		"scopes": [
+			"scope.userLocation"
+		]
+	}],
+	"rendererOptions": {
+		"skyline": {
+			"disableABTest": true,
+			"defaultDisplayBlock": true,
+			"defaultContentBox": true,
+			"tagNameStyleIsolation": "legacy",
+			"sdkVersionBegin": "3.7.8",
+			"sdkVersionEnd": "15.255.255"
+		}
 	}
 }
