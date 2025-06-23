@@ -47,12 +47,14 @@
 		<uv-collapse @change="change" @close="close" @open="open">
 			<uv-collapse-item title="API接口： wx.shareVideoMessage" name="Docs guide">
 				<view></view>
+				<view>注意：需在真机上进行联调</view>
 			</uv-collapse-item>
 		</uv-collapse>
 		<uv-button @tap="shareVoide" type="success" text="视频消息分享"></uv-button>
 		<uv-collapse @change="change" @close="close" @open="open">
 			<uv-collapse-item title="API接口： wx.shareFileMessage" name="Docs guide">
 				<view></view>
+				<view>注意：需在真机上进行联调</view>
 			</uv-collapse-item>
 		</uv-collapse>
 		<uv-button @tap="shareFlies" type="success" text="文件消息分享"></uv-button>
@@ -96,22 +98,20 @@
 	} from "vue";
 	import {
 		onLoad,
-		onUnload,
-		onShareAppMessage,
-		onShareTimeline
+		onUnload
 	} from "@dcloudio/uni-app";
 
 	// 添加缺失的事件处理方法
 	const change = (e) => {
-		console.log("折叠面板变化:", e);
+		// console.log("折叠面板变化:", e);
 	};
 
 	const close = (name) => {
-		console.log("面板关闭:", name);
+		// console.log("面板关闭:", name);
 	};
 
 	const open = (name) => {
-		console.log("面板打开:", name);
+		// console.log("面板打开:", name);
 	};
 
 	onLoad((option) => {
@@ -124,56 +124,6 @@
 		copyOff(); //退出页面时调用 wx.offCopyUrl，防止影响其它页面
 	});
 
-	/**
-	 * @desc 转发动态消息到微信联调中
-	 */
-	const shareDynamicMessage = () => {
-		// 模拟动态消息的活动ID，实际应用中需要从服务端获取
-		const activityId = "1327_bkU7UKry/nvzrLxXY2SMZnrnwBBAK2JHBK7c0_CplGvRFKQ05MhzyxwRK4vbYqRtETjIvUoZ8UW_z7Zy";
-
-		wx.updateShareMenu({
-			// 支持转发动态消息
-			isUpdatableMessage: true,
-			// 动态消息ID，需要根据服务端接口获取
-			activityId: activityId,
-			// 注意：只有转发到群聊中打开才可以获取到 shareTicket 返回值
-			withShareTicket: true,
-			// 动态消息模板信息
-			templateInfo: {
-				parameterList: [{
-						name: "member_count",
-						value: "1"
-					},
-					{
-						name: "room_limit",
-						value: "10"
-					},
-					{
-						name: "path",
-						value: "pages/wxExample/share"
-					},
-					{
-						name: "version_type",
-						value: "develop"
-					}
-				]
-			},
-			success: (res) => {
-				console.log("动态消息设置成功:", res);
-				uni.showToast({
-					title: "动态消息设置成功",
-					icon: "success"
-				});
-			},
-			fail: (err) => {
-				console.error("动态消息设置失败:", err);
-				uni.showToast({
-					title: "动态消息设置失败",
-					icon: "none"
-				});
-			}
-		});
-	};
 	/**
 	 * @desc 私密消息验证
 	 * */
@@ -188,7 +138,7 @@
 				//   valid: true
 				//   iv: 'xxxx',
 				//   encryptedData: 'xxxxxx'
-				// }
+				// }s
 			},
 			fail(res) {
 				console.log("authPrivateMessage fail", res);
@@ -223,7 +173,7 @@
 			// ③、设置该属性后群内消息不可转发
 			isUpdatableMessage: true,
 			// 属性3：动态消息ID；需要根据服务端接口获取
-			activityId: "1327_bkU7UKry/nvzrLxXY2SMZnrnwBBAK2JHBK7c0_CplGvRFKQ05MhzyxwRK4vbYqRtETjIvUoZ8UW_z7Zy",
+			activityId: "1327_9wnLzxPpaJaMpRsUVg3tsmMdbhBrkijTn81WzlTb0wLTinGCdW3JNf-oHgn2qHStCGNpaw_bCHOWvZU6",
 			// 属性4：群待办消息的ID：需要根据服务端接口获取
 			templateInfo: {
 				parameterList: [{
@@ -248,29 +198,28 @@
 	 * @desc 设置胶囊分享按钮是否可用
 	 */
 	const shareMenuShow = () => {
-		uni.showShareMenu({
-			title: "TodeAI测试的分享",
-			content: "TodeAI测试的分享内容",
-			imageUrl: "",
-			path: "",
-			success: (res) => {
-				uni.showToast({
-					title: "设置成功"
-				});
-			}
-		});
-		s;
-		// 微信官方API无法进行转发内容设置
-		// wx.showShareMenu({
-		// 	// 属性1：注意：只有转发到群聊中打开才可以获取到 shareTicket 返回值，单聊没有 shareTicket。转发私密消息时，群聊和单聊都可获取到 shareTicket
-		// 	withShareTicket: true,
-		// 	menus: ["shareAppMessage", "shareTimeline"],
-		// 	success: () => {
+		// uni.showShareMenu({
+		// 	title: "TodeAI测试的分享",
+		// 	content: "TodeAI测试的分享内容",
+		// 	imageUrl: "",
+		// 	path: "",
+		// 	success: (res) => {
 		// 		uni.showToast({
 		// 			title: "设置成功"
 		// 		});
 		// 	}
 		// });
+		// 微信官方API无法进行转发内容设置
+		wx.showShareMenu({
+			// 属性1：注意：只有转发到群聊中打开才可以获取到 shareTicket 返回值，单聊没有 shareTicket。转发私密消息时，群聊和单聊都可获取到 shareTicket
+			withShareTicket: true,
+			menus: ["shareAppMessage", "shareTimeline"],
+			success: () => {
+				uni.showToast({
+					title: "设置成功"
+				});
+			}
+		});
 	};
 	const shareMenuHide = () => {
 		wx.hideShareMenu({

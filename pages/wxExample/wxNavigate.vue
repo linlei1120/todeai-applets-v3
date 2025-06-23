@@ -1,92 +1,58 @@
 <template>
 	<view class="container">
 		<uv-collapse @change="change" @close="close" @open="open">
+			<uv-collapse-item title="API接口： wx.navigateTo" name="Docs guide">
+				<view>保留当前页面，跳转到应用内的某个页面。</view>
+				<view>注意：小程序中页面栈最多十层。</view>
+			</uv-collapse-item>
+		</uv-collapse>
+		<uv-button @tap="navNavigateTo" type="success" text="页面跳转"></uv-button>
+		<uv-collapse @change="change" @close="close" @open="open">
+			<uv-collapse-item title="API接口： wx.navigateBack" name="Docs guide">
+				<view></view>
+			</uv-collapse-item>
+		</uv-collapse>
+		<uv-button @tap="navNavigateBack" type="success" text="页面返回"></uv-button>
+		<uv-collapse @change="change" @close="close" @open="open">
 			<uv-collapse-item title="API接口： wx.switchTab" name="Docs guide">
 				<view>
-					应用场景：
-					<p>①设置动态消息，动态消息可再转发后动态修改内容以及设置推送提示；</p>
-					<p>②设置群内消息不可转发；</p>
-					<p>③根据用户状态生成动态分享卡片/控制分享权限/支持异步操作；</p>
-					<p>④群聊场景中获取 ShareTicket</p>
-					<p>
-						⑤设置私密消息：私密消息功能是这样一种能力：当分享者分享小程序卡片给其他用户或者微信群后，其他用户点击此小程序卡片时，开发者可以鉴别出点击卡片的用户是否被分享者分享过小程序卡片。s
-					</p>
+					<p>跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面；</p>
 				</view>
 			</uv-collapse-item>
 		</uv-collapse>
-		<uv-button @tap="navSwitchTab" icon="star-fill" type="success" text="tabBar 页面跳转"></uv-button>
+		<uv-button @tap="navSwitchTab" type="success" text="tabBar页面跳转"></uv-button>
 		<uv-collapse @change="change" @close="close" @open="open">
 			<uv-collapse-item title="API接口： wx.showShareMenu" name="Docs guide">
 				<view>
-					应用场景：
-					<p>①特定页面禁用分享到朋友圈；</p>
-					<p>②根据用户状态生成动态分享卡片/控制分享权限/支持异步操作；</p>
-					<p>③群聊场景中获取 ShareTicket</p>
+					特点：
+					<p>关闭所有页面，打开到应用内的某个页面</p>
 				</view>
 			</uv-collapse-item>
 		</uv-collapse>
-		<uv-button @tap="shareMenuShow" type="success" text="转发分享设置"></uv-button>
+		<uv-button @tap="navReLaunch" type="success" text="路由重置跳转"></uv-button>
 		<uv-collapse @change="change" @close="close" @open="open">
 			<uv-collapse-item title="API接口： wx.hideShareMenu" name="Docs guide">
 				<view>
-					应用场景：
-					<p>①特定页面禁用分享到朋友圈；</p>
-					<p>②根据用户状态生成动态分享卡片/控制分享权限/支持异步操作；</p>
-					<p>③群聊场景中获取 ShareTicket</p>
+					<p>关闭当前页面，跳转到应用内的某个页面。但是不允许跳转到 tabbar 页面。</p>
 				</view>
-				<view>注意：暂只在 Android 平台支持</view>
 			</uv-collapse-item>
 		</uv-collapse>
-		<uv-button @tap="shareMenuHide" type="success" text="转发分享隐藏"></uv-button>
+		<uv-button @tap="navRedirectTo" type="success" text="关闭当前页跳转"></uv-button>
 		<uv-collapse @change="change" @close="close" @open="open">
-			<uv-collapse-item title="API接口： wx.showShareImageMenu" name="Docs guide">
-				<view></view>
+			<uv-collapse-item title="API接口： wx.rewriteRoute" name="Docs guide">
+				<view>重写正在进行中的路由事件，与redirectTo()效果相似但实现原理不同，前者不会渲染原页面，后者会先按顺序渲染原页面再进行重置</view>
+				<view>
+					应用场景：
+					<p>①页面未找到的情况下，回到小程序主页或自定义页面</p>
+					<p>②将失效页面重写引导到新页面（如活动物料失效，重写跳转到新活动）</p>
+					<p>③用户身份变更后的界面重置为指定页面</p>
+				</view>
+				<view>注意：基础库 3.8.0 起</view>
 			</uv-collapse-item>
 		</uv-collapse>
-		<uv-button @tap="shareImage" type="success" text="图片消息分享"></uv-button>
-		<uv-collapse @change="change" @close="close" @open="open">
-			<uv-collapse-item title="API接口： wx.shareVideoMessage" name="Docs guide">
-				<view></view>
-			</uv-collapse-item>
-		</uv-collapse>
-		<uv-button @tap="shareVoide" type="success" text="视频消息分享"></uv-button>
-		<uv-collapse @change="change" @close="close" @open="open">
-			<uv-collapse-item title="API接口： wx.shareFileMessage" name="Docs guide">
-				<view></view>
-			</uv-collapse-item>
-		</uv-collapse>
-		<uv-button @tap="shareFlies" type="success" text="文件消息分享"></uv-button>
-		<uv-collapse @change="change" @close="close" @open="open">
-			<uv-collapse-item title="API接口： wx.onCopyUrl" name="Docs guide">
-				<view>注意：暂只在 Android 平台支持</view>
-			</uv-collapse-item>
-		</uv-collapse>
-		<uv-button @tap="copyUrl" type="success" text="复制链接监听"></uv-button>
-		<uv-collapse @change="change" @close="close" @open="open">
-			<uv-collapse-item title="API接口： wx.offCopyUrl" name="Docs guide">
-				<view>注意：暂只在 Android 平台支持</view>
-			</uv-collapse-item>
-		</uv-collapse>
-		<uv-button @tap="offCopy" type="success" text="复制链接监听关闭"></uv-button>
-		<uv-line margin="30" color="#2979ff"></uv-line>
+		<uv-button icon="star-fill" @tap="navRewriteRoute" type="success" text="路由重写"></uv-button>
 
-		<!-- 动态消息功能区域 -->
-		<view class="dynamic-message-section">
-			<text class="section-title">🚀 动态消息功能</text>
-			<view class="button-group">
-				<uv-button @tap="shareDynamicMessage" type="primary" text="转发动态消息" icon="share-fill"></uv-button>
-				<uv-button @tap="authPrivate" type="warning" text="验证私密消息" icon="edit-pen-fill"></uv-button>
-			</view>
-			<view class="tips">
-				<text class="tip-text">💡 动态消息特点：</text>
-				<text class="tip-item">• 支持后台动态修改消息内容</text>
-				<text class="tip-item">• 用户可订阅消息提醒</text>
-				<text class="tip-item">• 仅在群聊中生效且不可再次转发</text>
-				<text class="tip-item">• 需要配合服务端接口使用</text>
-			</view>
-		</view>
-
-		<!-- <button :dataset="{ id: 999 }" open-type="share">自定义分享按钮</button> -->
+		<view>自定义路由：wx.router</view>
 	</view>
 </template>
 
@@ -128,6 +94,28 @@
 			}
 		});
 	};
+	const navReLaunch = () => {
+		wx.reLaunch({
+			url: "/pages/wxExample/wxShare?id=1"
+		});
+	};
+	const navRedirectTo = () => {
+		wx.redirectTo({
+			url: "/pages/wxExample/wxShare?id=1"
+		});
+	};
+	const navNavigateTo = () => {
+		wx.navigateTo({
+			url: "/pages/wxExample/wxShare?id=1"
+		});
+	};
+	const navNavigateBack = () => {
+		wx.navigateBack({
+			// url: 'C?id=1'
+			delta: 2
+		});
+	};
+	const navRewriteRoute = () => {};
 	/**
 	 * @desc 转发动态消息到微信联调中
 	 */
