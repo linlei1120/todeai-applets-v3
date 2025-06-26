@@ -141,6 +141,31 @@
 		{
 			"path": "pages/cases/animateLoading",
 			"style": {}
+		},
+		{
+			"path": "pages/wxExample/wxInterface/wxInteraction",
+			"navigationBarTitleText": "界面交互API",
+			"style": {}
+		},
+		{
+			"path": "pages/wxExample/wxInterface/list",
+			"navigationBarTitleText": "界面API",
+			"style": {}
+		},
+		{
+			"path": "pages/wxExample/wxBase/list",
+			"navigationBarTitleText": "应用基础API",
+			"style": {}
+		},
+		{
+			"path": "pages/wxExample/wxBase/base",
+			"navigationBarTitleText": "应用基础API",
+			"style": {}
+		},
+		{
+			"path": "pages/wxExample/wxBase/wxSystem",
+			"navigationBarTitleText": "系统API",
+			"style": {}
 		}
 	],
 	"tabBar": {

@@ -20,34 +20,34 @@ import { ref, reactive } from "vue";
 const list = reactive([
 	{
 		id: 1,
-		title: "应用基础API",
-		des: "解你困惑，知你烦恼",
-		img: "/static/img/nav/logo.png",
-		path: "/pages/wxExample/wxBase/list",
-		type: "URL"
-	},
-	{
-		id: 2,
-		title: "跳转相关API",
+		title: "页面交互",
 		des: "解你困惑，知你烦恼",
 		img: "/static/img/nav/logo.png",
 		path: "/pages/wxExample/wxNavigate",
 		type: "URL"
 	},
 	{
-		id: 3,
-		title: "转发分享API",
+		id: 2,
+		title: "导航栏",
 		des: "解你困惑，知你烦恼",
 		img: "/static/img/nav/logo.png",
-		path: "/pages/wxExample/navigateModule",
+		path: "/pages/cases/navigateModule",
+		type: "URL"
+	},
+	{
+		id: 3,
+		title: "背景设置",
+		des: "解你困惑，知你烦恼",
+		img: "/static/img/nav/logo.png",
+		path: "/pages/wxExample/wxShare",
 		type: "URL"
 	},
 	{
 		id: 4,
-		title: "聊天工具API",
+		title: "tabBar设置",
 		des: "解你困惑，知你烦恼",
 		img: "/static/img/nav/logo.png",
-		path: "/pages/cases/wxShare",
+		path: "/pages/cases/chat",
 		type: "URL"
 	},
 	{
@@ -55,33 +55,49 @@ const list = reactive([
 		title: "界面相关API",
 		des: "解你困惑，知你烦恼",
 		img: "/static/img/nav/bill-sel.png",
-		path: "/pages/wxExample/wxInterface/chat",
+		path: "/pages/cases/shareMoudel",
 		type: "URL"
 	},
 	{
 		id: 6,
-		title: "界面相关API",
+		title: "自定义字体/下拉刷新/滚动/置顶",
 		des: "解你困惑，知你烦恼",
 		img: "/static/img/nav/bill-sel.png",
-		path: "/pages/wxExample/wxInterface/list",
+		path: "/pages/cases/navigateModule",
+		type: "URL"
+	},
+	{
+		id: 7,
+		title: "动画",
+		des: "解你困惑，知你烦恼",
+		img: "/static/img/nav/bill-sel.png",
+		path: "/pages/cases/chat",
+		type: "URL"
+	},
+	{
+		id: 8,
+		title: "worklet动画",
+		des: "解你困惑，知你烦恼",
+		img: "/static/img/nav/bill-sel.png",
+		path: "/pages/cases/chat",
+		type: "URL"
+	},
+	{
+		id: 9,
+		title: "窗口",
+		des: "解你困惑，知你烦恼",
+		img: "/static/img/nav/bill-sel.png",
+		path: "/pages/cases/chat",
+		type: "URL"
+	},
+	{
+		id: 10,
+		title: "菜单",
+		des: "解你困惑，知你烦恼",
+		img: "/static/img/nav/bill-sel.png",
+		path: "/pages/cases/chat",
 		type: "URL"
 	}
-	// {
-	// 	id: 6,
-	// 	title: "跳转相关API",
-	// 	des: "解你困惑，知你烦恼",
-	// 	img: "/static/img/nav/bill-sel.png",
-	// 	path: "/pages/cases/navigateModule",
-	// 	type: "URL"
-	// },
-	// {
-	// 	id: 7,
-	// 	title: "聊天工具API",
-	// 	des: "解你困惑，知你烦恼",
-	// 	img: "/static/img/nav/bill-sel.png",
-	// 	path: "/pages/cases/chat",
-	// 	type: "URL"
-	// }
 ]);
 const handleJump = (item) => {
 	console.log(item.path);
