@@ -136,6 +136,42 @@
 		{
 			"path": "pages/cases/animateLoading",
 			"style": {}
+		},
+		{
+			"path": "pages/cases/animateDemo",
+			"style": {
+				"navigationBarTitleText": "动画API示例"
+			}
+		},
+		{
+			"path": "pages/cases/topBarDemo",
+			"style": {
+				"navigationBarTitleText": "置顶栏文本示例"
+			}
+		},
+		{
+			"path": "pages/cases/nextTickDemo",
+			"style": {
+				"navigationBarTitleText": "nextTick示例"
+			}
+		},
+		{
+			"path": "pages/cases/menuButtonDemo",
+			"style": {
+				"navigationBarTitleText": "菜单按钮API示例"
+			}
+		},
+		{
+			"path": "pages/cases/pageScrollDemo",
+			"style": {
+				"navigationBarTitleText": "页面滚动API示例"
+			}
+		},
+		{
+			"path": "pages/cases/pageModule",
+			"style": {
+				"navigationBarTitleText": "微信API示例"
+			}
 		}
 	],
 	"tabBar": {
