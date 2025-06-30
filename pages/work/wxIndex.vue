@@ -28,7 +28,7 @@ const list = reactive([
 	},
 	{
 		id: 2,
-		title: "跳转相关API",
+		title: "路由导航API",
 		des: "解你困惑，知你烦恼",
 		img: "/static/img/nav/logo.png",
 		path: "/pages/wxExample/wxNavigate",
@@ -36,10 +36,10 @@ const list = reactive([
 	},
 	{
 		id: 3,
-		title: "转发分享API",
+		title: "跳转API",
 		des: "解你困惑，知你烦恼",
 		img: "/static/img/nav/logo.png",
-		path: "/pages/wxExample/navigateModule",
+		path: "/pages/cases/navigateModule",
 		type: "URL"
 	},
 	{
@@ -47,15 +47,15 @@ const list = reactive([
 		title: "聊天工具API",
 		des: "解你困惑，知你烦恼",
 		img: "/static/img/nav/logo.png",
-		path: "/pages/cases/wxShare",
+		path: "/pages/cases/chat",
 		type: "URL"
 	},
 	{
 		id: 5,
-		title: "界面相关API",
+		title: "转发分享API",
 		des: "解你困惑，知你烦恼",
 		img: "/static/img/nav/bill-sel.png",
-		path: "/pages/wxExample/wxInterface/chat",
+		path: "/pages/wxExample/wxShare",
 		type: "URL"
 	},
 	{

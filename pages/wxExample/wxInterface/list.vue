@@ -23,7 +23,7 @@ const list = reactive([
 		title: "页面交互",
 		des: "解你困惑，知你烦恼",
 		img: "/static/img/nav/logo.png",
-		path: "/pages/wxExample/wxNavigate",
+		path: "/pages/wxExample/wxInterface/wxInteraction",
 		type: "URL"
 	},
 	{
@@ -79,7 +79,7 @@ const list = reactive([
 		title: "worklet动画",
 		des: "解你困惑，知你烦恼",
 		img: "/static/img/nav/bill-sel.png",
-		path: "/pages/cases/chat",
+		path: "/pages/wxExample/wxInterface/wxWorklet",
 		type: "URL"
 	},
 	{
@@ -87,7 +87,7 @@ const list = reactive([
 		title: "窗口",
 		des: "解你困惑，知你烦恼",
 		img: "/static/img/nav/bill-sel.png",
-		path: "/pages/cases/chat",
+		path: "/pages/wxExample/wxInterface/wxWindow",
 		type: "URL"
 	},
 	{
@@ -120,99 +120,6 @@ const handleJump = (item) => {
 			break;
 	}
 };
-
-// const globalData = getApp().globalData;
-// export default {
-// 	components: {},
-// 	data() {
-// 		return {
-// 			userInfo: null,
-// 			list: [
-// 				{
-// 					id: 1,
-// 					title: "ai问答",
-// 					des: "解你困惑，知你烦恼",
-// 					img: "/static/img/nav/bill-sel.png",
-// 					path: "/pages/index/aiChat",
-// 					type: "URL"
-// 				},
-// 				{
-// 					id: 2,
-// 					title: "ai抽签",
-// 					des: "解你困惑，知你烦恼",
-// 					img: "/static/img/nav/bill-sel.png",
-// 					path: "/pages/cases/appletsSway",
-// 					type: "URL"
-// 				},
-// 				{
-// 					id: 3,
-// 					title: "陀螺仪",
-// 					des: "解你困惑，知你烦恼",
-// 					img: "/static/img/nav/bill-sel.png",
-// 					path: "/pages/cases/gyroscope",
-// 					type: "URL"
-// 				},
-// 				{
-// 					id: 4,
-// 					title: "自定义字体",
-// 					des: "解你困惑，知你烦恼",
-// 					img: "/static/img/nav/bill-sel.png",
-// 					path: "/pages/cases/fontCustom",
-// 					type: "URL"
-// 				},
-// 				{
-// 					id: 5,
-// 					title: "小程序转发",
-// 					des: "解你困惑，知你烦恼",
-// 					img: "/static/img/nav/bill-sel.png",
-// 					path: "/pages/cases/shareMoudel",
-// 					type: "URL"
-// 				}
-// 			]
-// 		};
-// 	},
-// 	onLoad() {
-// 		this.userInfo = this.getLoginUserInfo();
-// 	},
-// 	onShareAppMessage: function () {
-// 		let uid = this.userInfo ? this.userInfo.uid : 0;
-// 		return {
-// 			title: "我正在使用" + globalData.appName + ",ai问答,ai绘画...它帮我解决了日常生活中的很多问题,你也快来试试吧~",
-// 			imageUrl: "/static/logo.png",
-// 			path: "/pages/index/index?pid=" + uid
-// 		};
-// 	},
-// 	onShareTimeline: function () {
-// 		let uid = this.userInfo ? this.userInfo.uid : 0;
-// 		return {
-// 			title: "我正在使用" + globalData.appName + ",ai问答,ai绘画...它帮我解决了日常生活中的很多问题,你也快来试试吧~",
-// 			imageUrl: "/static/logo.png",
-// 			path: "/pages/index/index?pid=" + uid
-// 		};
-// 	},
-// 	methods: {
-// 		handleJump(item) {
-// 			switch (item.type) {
-// 				case "URL":
-// 					uni.navigateTo({
-// 						url: item.path + "?id=" + item.id + "&price=" + item.price + "&title=" + item.title
-// 					});
-// 					break;
-// 				case "WEAPP":
-// 					uni.navigateToMiniProgram({
-// 						appId: item.appid,
-// 						path: item.path
-// 					});
-// 					break;
-// 				case "WEBVIEW":
-// 					uni.navigateTo({
-// 						url: "/pages/main/webview/webview?url=" + encodeURIComponent(item.path)
-// 					});
-// 					break;
-// 			}
-// 		}
-// 	}
-// };
 </script>
 
 <style lang="scss" scoped>

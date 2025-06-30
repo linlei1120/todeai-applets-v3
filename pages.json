@@ -166,6 +166,16 @@
 			"path": "pages/wxExample/wxBase/wxSystem",
 			"navigationBarTitleText": "系统API",
 			"style": {}
+		},
+		{
+			"path": "pages/wxExample/wxInterface/wxWindow",
+			"navigationBarTitleText": "窗口API",
+			"style": {}
+		},
+		{
+			"path": "pages/wxExample/wxInterface/wxWorklet",
+			"navigationBarTitleText": "workLet动画",
+			"style": {}
 		}
 	],
 	"tabBar": {
