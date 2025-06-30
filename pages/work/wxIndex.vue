@@ -20,10 +20,11 @@ import { ref, reactive } from "vue";
 const list = reactive([
 	{
 		id: 1,
-		title: "应用基础API",
+
+		title: "设备API",
 		des: "解你困惑，知你烦恼",
-		img: "/static/img/nav/logo.png",
-		path: "/pages/wxExample/wxBase/list",
+		img: "/static/img/nav/bill-sel.png",
+		path: "/pages/wxExample/device",
 		type: "URL"
 	},
 	{
@@ -32,6 +33,7 @@ const list = reactive([
 		des: "解你困惑，知你烦恼",
 		img: "/static/img/nav/logo.png",
 		path: "/pages/wxExample/wxNavigate",
+
 		type: "URL"
 	},
 	{
@@ -40,6 +42,7 @@ const list = reactive([
 		des: "解你困惑，知你烦恼",
 		img: "/static/img/nav/logo.png",
 		path: "/pages/cases/navigateModule",
+
 		type: "URL"
 	},
 	{
@@ -48,6 +51,7 @@ const list = reactive([
 		des: "解你困惑，知你烦恼",
 		img: "/static/img/nav/logo.png",
 		path: "/pages/cases/chat",
+
 		type: "URL"
 	},
 	{
@@ -82,6 +86,7 @@ const list = reactive([
 	// 	path: "/pages/cases/chat",
 	// 	type: "URL"
 	// }
+
 ]);
 const handleJump = (item) => {
 	console.log(item.path);
