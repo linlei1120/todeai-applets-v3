@@ -9,6 +9,8 @@ const { proxy } = getCurrentInstance();
 
 onLaunch((option) => {
 	console.log("onLaunch", option);
+	// 综合判断方法
+	wx.env.envData = "develop";
 	initApp();
 	wx.getShareInfo({
 		shareTicket: option.shareTicket,

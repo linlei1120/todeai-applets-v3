@@ -49,7 +49,7 @@
 		"appid": "wxef2a3802b46d31e2",
 		"setting": {
 			"urlCheck": false,
-			"es6": false,
+			"es6": true,
 			"minified": true,
 			"postcss": true
 		},

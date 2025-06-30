@@ -20,6 +20,7 @@ import { ref, reactive } from "vue";
 const list = reactive([
 	{
 		id: 1,
+
 		title: "设备API",
 		des: "解你困惑，知你烦恼",
 		img: "/static/img/nav/bill-sel.png",
@@ -28,60 +29,64 @@ const list = reactive([
 	},
 	{
 		id: 2,
-		title: "ai抽签",
+		title: "路由导航API",
 		des: "解你困惑，知你烦恼",
-		img: "/static/img/nav/bill-sel.png",
-		path: "/pages/cases/appletsSway",
+		img: "/static/img/nav/logo.png",
+		path: "/pages/wxExample/wxNavigate",
+
 		type: "URL"
 	},
 	{
 		id: 3,
-		title: "陀螺仪",
+		title: "跳转API",
 		des: "解你困惑，知你烦恼",
-		img: "/static/img/nav/bill-sel.png",
-		path: "/pages/cases/gyroscope",
+		img: "/static/img/nav/logo.png",
+		path: "/pages/cases/navigateModule",
+
 		type: "URL"
 	},
 	{
 		id: 4,
-		title: "自定义字体",
+		title: "聊天工具API",
 		des: "解你困惑，知你烦恼",
-		img: "/static/img/nav/bill-sel.png",
-		path: "/pages/cases/fontCustom",
+		img: "/static/img/nav/logo.png",
+		path: "/pages/cases/chat",
+
 		type: "URL"
 	},
 	{
 		id: 5,
-		title: "小程序转发",
+		title: "转发分享API",
 		des: "解你困惑，知你烦恼",
 		img: "/static/img/nav/bill-sel.png",
-		path: "/pages/cases/shareMoudel",
+		path: "/pages/wxExample/wxShare",
 		type: "URL"
 	},
 	{
 		id: 6,
-		title: "跳转相关API",
+		title: "界面相关API",
 		des: "解你困惑，知你烦恼",
 		img: "/static/img/nav/bill-sel.png",
-		path: "/pages/cases/navigateModule",
-		type: "URL"
-	},
-	{
-		id: 7,
-		title: "聊天工具API",
-		des: "解你困惑，知你烦恼",
-		img: "/static/img/nav/bill-sel.png",
-		path: "/pages/cases/chat",
-		type: "URL"
-	},
-	{
-		id: 8,
-		title: "界面-交互、导航栏、背景API",
-		des: "解你困惑，知你烦恼",
-		img: "/static/img/nav/bill-sel.png",
-		path: "/pages/cases/interface",
+		path: "/pages/wxExample/wxInterface/list",
 		type: "URL"
 	}
+	// {
+	// 	id: 6,
+	// 	title: "跳转相关API",
+	// 	des: "解你困惑，知你烦恼",
+	// 	img: "/static/img/nav/bill-sel.png",
+	// 	path: "/pages/cases/navigateModule",
+	// 	type: "URL"
+	// },
+	// {
+	// 	id: 7,
+	// 	title: "聊天工具API",
+	// 	des: "解你困惑，知你烦恼",
+	// 	img: "/static/img/nav/bill-sel.png",
+	// 	path: "/pages/cases/chat",
+	// 	type: "URL"
+	// }
+
 ]);
 const handleJump = (item) => {
 	console.log(item.path);
