@@ -136,6 +136,12 @@
 		{
 			"path": "pages/cases/animateLoading",
 			"style": {}
+		},
+		{
+			"path": "pages/cases/interface",
+			"style": {
+				"enablePullDownRefresh": true
+			}
 		}
 	],
 	"tabBar": {
