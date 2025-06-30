@@ -110,6 +110,12 @@
 			}
 		},
 		{
+			"path": "pages/cases/interfaceModule",
+			"style": {
+				"navigationBarTitleText": "界面相关API"
+			}
+		},
+		{
 			"path": "pages/wxExample/device",
 			"style": {
 				"navigationBarTitleText": "设备接口"
