@@ -144,12 +144,6 @@
 			}
 		},
 		{
-			"path": "pages/cases/topBarDemo",
-			"style": {
-				"navigationBarTitleText": "置顶栏文本示例"
-			}
-		},
-		{
 			"path": "pages/cases/nextTickDemo",
 			"style": {
 				"navigationBarTitleText": "nextTick示例"
@@ -219,8 +213,7 @@
 				}
 			],
 			"independent": true,
-			"componentFramework": "glass-easel",
-			"renderer": "skyline"
+			"componentFramework": "glass-easel"
 		}
 	],
 	"lazyCodeLoading": "requiredComponents",
