@@ -29,7 +29,7 @@
 			"style": {
 				"navigationBarTitleText": "工作台"
 			}
-		},
+		}, ；
 		{
 			"path": "pages/mine/index",
 			"style": {
