@@ -30,7 +30,7 @@
 			"style": {
 				"navigationBarTitleText": "工作台"
 			}
-		},
+		}, ；
 		{
 			"path": "pages/mine/index",
 			"style": {
@@ -134,13 +134,54 @@
 			}
 		},
 		{
-			"path": "pages/wxExample/share",
+			"path": "pages/wxExample/wxShare",
 			"style": {
 				"navigationBarTitleText": "转发分享"
 			}
 		},
 		{
+			"path": "pages/wxExample/wxNavigate",
+			"style": {
+				"navigationBarTitleText": "页面路由"
+			}
+		},
+		{
 			"path": "pages/cases/animateLoading",
+			"style": {}
+		},
+		{
+			"path": "pages/wxExample/wxInterface/wxInteraction",
+			"navigationBarTitleText": "界面交互API",
+			"style": {}
+		},
+		{
+			"path": "pages/wxExample/wxInterface/list",
+			"navigationBarTitleText": "界面API",
+			"style": {}
+		},
+		{
+			"path": "pages/wxExample/wxBase/list",
+			"navigationBarTitleText": "应用基础API",
+			"style": {}
+		},
+		{
+			"path": "pages/wxExample/wxBase/base",
+			"navigationBarTitleText": "应用基础API",
+			"style": {}
+		},
+		{
+			"path": "pages/wxExample/wxBase/wxSystem",
+			"navigationBarTitleText": "系统API",
+			"style": {}
+		},
+		{
+			"path": "pages/wxExample/wxInterface/wxWindow",
+			"navigationBarTitleText": "窗口API",
+			"style": {}
+		},
+		{
+			"path": "pages/wxExample/wxInterface/wxWorklet",
+			"navigationBarTitleText": "workLet动画",
 			"style": {}
 		},
 		{
