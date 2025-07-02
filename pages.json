@@ -110,6 +110,12 @@
 			}
 		},
 		{
+			"path": "pages/cases/interfaceModule",
+			"style": {
+				"navigationBarTitleText": "界面相关API"
+			}
+		},
+		{
 			"path": "pages/wxExample/device",
 			"style": {
 				"navigationBarTitleText": "设备接口"
@@ -179,10 +185,33 @@
 			"style": {}
 		},
 		{
-			"path": "pages/cases/interface",
-			"navigationBarTitleText": "界面交互",
+			"path": "pages/cases/animateDemo",
 			"style": {
-				"enablePullDownRefresh": true
+				"navigationBarTitleText": "动画API示例"
+			}
+		},
+		{
+			"path": "pages/cases/nextTickDemo",
+			"style": {
+				"navigationBarTitleText": "nextTick示例"
+			}
+		},
+		{
+			"path": "pages/cases/menuButtonDemo",
+			"style": {
+				"navigationBarTitleText": "菜单按钮API示例"
+			}
+		},
+		{
+			"path": "pages/cases/pageScrollDemo",
+			"style": {
+				"navigationBarTitleText": "页面滚动API示例"
+			}
+		},
+		{
+			"path": "pages/cases/pageModule",
+			"style": {
+				"navigationBarTitleText": "微信API示例"
 			}
 		}
 	],
