@@ -26,74 +26,56 @@
 </template>
 
 <script setup>
-import {
-	ref,
-	reactive
-} from "vue";
-const list = reactive([{
-	id: 1,
-	title: "设备API",
-	des: "解你困惑，知你烦恼",
-	img: "/static/img/nav/bill-sel.png",
-	path: "/pages/wxExample/device",
-	type: "URL"
-},
-{
-	id: 2,
-	title: "ai抽签",
-	des: "解你困惑，知你烦恼",
-	img: "/static/img/nav/bill-sel.png",
-	path: "/pages/cases/appletsSway",
-	type: "URL"
-},
-{
-	id: 3,
-	title: "陀螺仪",
-	des: "解你困惑，知你烦恼",
-	img: "/static/img/nav/bill-sel.png",
-	path: "/pages/cases/gyroscope",
-	type: "URL"
-},
-{
-	id: 4,
-	title: "自定义字体",
-	des: "解你困惑，知你烦恼",
-	img: "/static/img/nav/bill-sel.png",
-	path: "/pages/cases/fontCustom",
-	type: "URL"
-},
-{
-	id: 5,
-	title: "小程序转发",
-	des: "解你困惑，知你烦恼",
-	img: "/static/img/nav/bill-sel.png",
-	path: "/pages/cases/shareMoudel",
-	type: "URL"
-},
-{
-	id: 6,
-	title: "跳转相关API",
-	des: "解你困惑，知你烦恼",
-	img: "/static/img/nav/bill-sel.png",
-	path: "/pages/cases/navigateModule",
-	type: "URL"
-},
-{
-	id: 7,
-	title: "聊天工具API",
-	des: "解你困惑，知你烦恼",
-	img: "/static/img/nav/bill-sel.png",
-	path: "/pages/cases/chat",
-	type: "URL"
-},
-{
-	id: 8,
-	title: "界面相关API",
-	des: "解你困惑，知你烦恼",
-	img: "/static/img/nav/bill-sel.png",
-	path: "/pages/cases/interfaceModule",
-	type: "URL"
-}
+import { ref, reactive } from "vue";
+const list = reactive([
+	{
+		id: 1,
+		title: "微信基础API",
+		des: "解你困惑，知你烦恼",
+		img: "/static/img/nav/bill-sel.png",
+		path: "/pages/wxExample/wxBase/list",
+		type: "URL"
+	},
+	{
+		id: 2,
+		title: "路由相关API",
+		des: "解你困惑，知你烦恼",
+		img: "/static/img/nav/bill-sel.png",
+		path: "/pages/cases/fontCustom",
+		type: "URL"
+	},
+	{
+		id: 3,
+		title: "跳转相关API",
+		des: "解你困惑，知你烦恼",
+		img: "/static/img/nav/bill-sel.png",
+		path: "/pages/cases/shareMoudel",
+		type: "URL"
+	},
+	{
+		id: 4,
+		title: "聊天工具API",
+		des: "解你困惑，知你烦恼",
+		img: "/static/img/nav/bill-sel.png",
+		path: "/pages/cases/navigateModule",
+		type: "URL"
+	},
+	{
+		id: 5,
+		title: "转发相关API",
+		des: "解你困惑，知你烦恼",
+		img: "/static/img/nav/bill-sel.png",
+		path: "/pages/cases/chat",
+		type: "URL"
+	},
+	{
+		id: 6,
+		title: "界面相关API",
+		des: "解你困惑，知你烦恼",
+		img: "/static/img/nav/bill-sel.png",
+		path: "/pages/cases/interfaceModule",
+		type: "URL"
+	}
 ]);
 const handleJump = (item) => {
 	console.log(item.path);
@@ -115,88 +97,85 @@ const handleJump = (item) => {
 			});
 			break;
 	}
-}
+};
 
-/** 查看小红点 */;
-const showTabBarRedDot = () => {
+/** 查看小红点 */ const showTabBarRedDot = () => {
 	wx.showTabBarRedDot({
-    	index: 0,//tabBar 的哪一项，从左边算起 必填
-	})
-}
+		index: 0 //tabBar 的哪一项，从左边算起 必填
+	});
+};
 
-/** 隐藏小红点 */;
-const hideTabBarRedDot = () => {
+/** 隐藏小红点 */ const hideTabBarRedDot = () => {
 	wx.hideTabBarRedDot({
-		index: 0,//tabBar 的哪一项，从左边算起 必填
-	})
-}
+		index: 0 //tabBar 的哪一项，从左边算起 必填
+	});
+};
 
 /** 展示TabBar */
 const showTabBar = () => {
 	wx.showTabBar({
-    animation: true,
-    success: function () {
-        console.log('显示tabBar成功');
-    },
-    fail: function (err) {
-        console.log('显示tabBar失败', err);
-    },
-    complete: function () {
-        console.log('显示tabBar操作结束');
-    }
-})
-}
+		animation: true,
+		success: function () {
+			console.log("显示tabBar成功");
+		},
+		fail: function (err) {
+			console.log("显示tabBar失败", err);
+		},
+		complete: function () {
+			console.log("显示tabBar操作结束");
+		}
+	});
+};
 /** 隐藏TabBar */
 const hideTabBar = () => {
 	wx.hideTabBar({
 		animation: true,
 		success: function () {
-			console.log('隐藏tabBar成功');
+			console.log("隐藏tabBar成功");
 		},
 		fail: function (err) {
-			console.log('隐藏tabBar失败', err);
+			console.log("隐藏tabBar失败", err);
 		},
 		complete: function () {
-			console.log('隐藏tabBar操作结束');
+			console.log("隐藏tabBar操作结束");
 		}
-	})
-}
+	});
+};
 
 /** 设置TabBar样式 */
 const setTabBarStyle = () => {
 	//该 API 只能在 tabBar 页面使用
 	wx.setTabBarStyle({
-		color: '#333333',
-		selectedColor: '#FF0000',
-		backgroundColor: '#FFFFFF',
-		borderStyle: 'white',
-	})
-}
+		color: "#333333",
+		selectedColor: "#FF0000",
+		backgroundColor: "#FFFFFF",
+		borderStyle: "white"
+	});
+};
 
 /** 设置TabBar */
 const setTabBarItem = () => {
 	wx.setTabBarItem({
-		index: 0,//从左边算起，索引从 0 开始
-		text: '首页',
-		iconPath: '/static/img/nav/home.png',//图标路径不支持网络图片，必须使用本地路径
-		selectedIconPath: '/static/img/nav/home-sel.png',
-	})
-}
+		index: 0, //从左边算起，索引从 0 开始
+		text: "首页",
+		iconPath: "/static/img/nav/home.png", //图标路径不支持网络图片，必须使用本地路径
+		selectedIconPath: "/static/img/nav/home-sel.png"
+	});
+};
 
 /** 设置TabBar角标 */
 const setTabBarBadge = () => {
 	wx.setTabBarBadge({
-		index: 0,//tabBar 的哪一项，从左边算起 必填
-		text: '99+',//角标内容，超过 4 个字符则显示为 '...'
-	})
-}
+		index: 0, //tabBar 的哪一项，从左边算起 必填
+		text: "99+" //角标内容，超过 4 个字符则显示为 '...'
+	});
+};
 /** 移除TabBar角标 */
 const removeTabBarBadge = () => {
 	wx.removeTabBarBadge({
-		index: 0,//tabBar 的哪一项，从左边算起 必填
-	})
-}
-
+		index: 0 //tabBar 的哪一项，从左边算起 必填
+	});
+};
 
 // const globalData = getApp().globalData;
 // export default {

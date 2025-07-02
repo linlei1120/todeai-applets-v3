@@ -53,6 +53,7 @@
 			</uv-collapse-item>
 		</uv-collapse>
 		<uv-button @tap="getWxAuthSetting" type="success" text="微信APP授权设置信息"></uv-button>
+		<view style="word-wrap: break-word">{{ JSON.stringify(deviceInfos) }}</view>
 	</view>
 </template>
 
@@ -60,6 +61,7 @@
 import { ref } from "vue";
 import { onLoad, onUnload, onShareAppMessage, onShareTimeline } from "@dcloudio/uni-app";
 const envData = ref({});
+const deviceInfos = ref({});
 // 添加缺失的事件处理方法
 const change = (e) => {
 	console.log("折叠面板变化:", e);
@@ -101,6 +103,7 @@ const authorizeSetting = () => {
 };
 const getWindow = () => {
 	const windowInfo = wx.getWindowInfo();
+	deviceInfos.value = windowInfo;
 	console.log("设备像素比", windowInfo.pixelRatio);
 	console.log("屏幕宽度", windowInfo.screenWidth);
 	console.log("屏幕高度", windowInfo.screenHeight);
@@ -116,6 +119,7 @@ const getWindow = () => {
 };
 const getSystemSet = () => {
 	const systemSetting = wx.getSystemSetting();
+	deviceInfos.value = systemSetting;
 	console.log("蓝牙的系统开关", systemSetting.bluetoothEnabled);
 	console.log("地理位置的系统开关", systemSetting.deviceOrientation);
 	console.log("设备方向", systemSetting.locationEnabled); //portrait 竖屏 landscape横屏
@@ -124,6 +128,7 @@ const getSystemSet = () => {
 const getDeviceInfo = () => {
 	const deviceInfo = wx.getDeviceInfo();
 	const deviceBenchmarkInfo = wx.getDeviceBenchmarkInfo();
+	deviceInfos.value = deviceInfo;
 	console.log("应用（微信APP）二进制接口类型", deviceInfo.abi); // 仅安卓支持
 	console.log("设备二进制接口类型", deviceInfo.deviceAbi); // 仅安卓支持
 	console.log("设备品牌", deviceInfo.brand);
@@ -136,6 +141,7 @@ const getDeviceInfo = () => {
 };
 const getAppBaseInfo = () => {
 	const appBaseInfo = wx.getAppBaseInfo();
+	deviceInfos.value = appBaseInfo;
 	console.log("客户端基础库版本", appBaseInfo.SDKVersion);
 	console.log("是否打开调试工具", appBaseInfo.enableDebug);
 	console.log("小程序运行的宿主环境", appBaseInfo.host);
@@ -147,7 +153,7 @@ const getAppBaseInfo = () => {
 };
 const getWxAuthSetting = () => {
 	const appAuthorizeSetting = wx.getAppAuthorizeSetting();
-
+	deviceInfos.value = appAuthorizeSetting;
 	console.log("允许微信使用相册的开关(仅IOS)", appAuthorizeSetting.albumAuthorized); // 仅IOS有效
 	console.log("允许微信使用蓝牙的开关", appAuthorizeSetting.bluetoothAuthorized); //基础库3.5.0+
 	console.log("允许微信使用摄像头的开关", appAuthorizeSetting.cameraAuthorized);

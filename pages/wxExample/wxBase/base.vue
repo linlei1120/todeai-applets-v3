@@ -15,6 +15,14 @@
 			</uv-collapse-item>
 		</uv-collapse>
 		<uv-button @tap="canUse" type="success" text="低版本兼容"></uv-button>
+		<uv-collapse @change="change" @close="close" @open="open">
+			<uv-collapse-item title="base64字符串转换" name="Docs guide">
+				<view>由于微信官方停止维护原arrayBufferToBase64接口，所以可以自己维护格式转换脚本文件</view>
+				<uv-input placeholder="请输入转换内容" border="surround" v-model="baseBuffer"></uv-input>
+				<view>{{ base64String }}</view>
+			</uv-collapse-item>
+		</uv-collapse>
+		<uv-button @tap="bufferToBase64" type="success" text="低版本兼容"></uv-button>
 	</view>
 </template>
 
@@ -24,6 +32,8 @@ import { onLoad, onUnload, onShareAppMessage, onShareTimeline } from "@dcloudio/
 const envData = ref({});
 const userCxt = ref("");
 const isUse = ref();
+const baseBuffer = ref("");
+const base64String = ref("");
 // 添加缺失的事件处理方法
 const change = (e) => {
 	console.log("折叠面板变化:", e);
@@ -60,6 +70,7 @@ const canUse = () => {
 	console.log(wx.canIUse(userCxt.value));
 	isUse.value = wx.canIUse(userCxt.value);
 };
+const bufferToBase64 = () => {};
 </script>
 
 <style lang="scss" scoped>
