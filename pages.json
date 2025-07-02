@@ -1,5 +1,6 @@
 {
-	"pages": [{
+	"pages": [
+		{
 			"path": "pages/work/wxIndex",
 			"style": {
 				"navigationBarTitleText": "WX工具"
@@ -109,6 +110,12 @@
 			}
 		},
 		{
+			"path": "pages/cases/interfaceModule",
+			"style": {
+				"navigationBarTitleText": "界面相关API"
+			}
+		},
+		{
 			"path": "pages/wxExample/device",
 			"style": {
 				"navigationBarTitleText": "设备接口"
@@ -176,6 +183,36 @@
 			"path": "pages/wxExample/wxInterface/wxWorklet",
 			"navigationBarTitleText": "workLet动画",
 			"style": {}
+		},
+		{
+			"path": "pages/cases/animateDemo",
+			"style": {
+				"navigationBarTitleText": "动画API示例"
+			}
+		},
+		{
+			"path": "pages/cases/nextTickDemo",
+			"style": {
+				"navigationBarTitleText": "nextTick示例"
+			}
+		},
+		{
+			"path": "pages/cases/menuButtonDemo",
+			"style": {
+				"navigationBarTitleText": "菜单按钮API示例"
+			}
+		},
+		{
+			"path": "pages/cases/pageScrollDemo",
+			"style": {
+				"navigationBarTitleText": "页面滚动API示例"
+			}
+		},
+		{
+			"path": "pages/cases/pageModule",
+			"style": {
+				"navigationBarTitleText": "微信API示例"
+			}
 		}
 	],
 	"tabBar": {
@@ -183,7 +220,8 @@
 		"selectedColor": "#000000",
 		"borderStyle": "white",
 		"backgroundColor": "#ffffff",
-		"list": [{
+		"list": [
+			{
 				"pagePath": "pages/work/wxIndex",
 				"iconPath": "static/images/tabbar/work.png",
 				"selectedIconPath": "static/images/tabbar/work_.png",
@@ -208,26 +246,32 @@
 		"navigationBarTitleText": "TodeAI",
 		"navigationBarBackgroundColor": "#FFFFFF"
 	},
-	"subPackages": [{
-		"root": "packageA",
-		"name": "chatTools",
+	"subPackages": [
+		{
+			"root": "packageA",
+			"name": "chatTools",
 
-		"pages": [{
-			"path": "pages/cases/chat",
-			"style": {
-				"navigationBarTitleText": "聊天工具API"
-			}
-		}],
-		"independent": true,
-		"componentFramework": "glass-easel"
-	}],
+			"pages": [
+				{
+					"path": "pages/cases/chat",
+					"style": {
+						"navigationBarTitleText": "聊天工具API"
+					}
+				}
+			],
+			"independent": true,
+			"componentFramework": "glass-easel"
+		}
+	],
 	"lazyCodeLoading": "requiredComponents",
-	"chatTools": [{
-		"root": "packageA",
-		"entryPagePath": "pages/cases/chat",
-		"desc": "群聊助手 - 提供图片、视频、文件分享等功能",
-		"scopes": ["scope.userLocation"]
-	}],
+	"chatTools": [
+		{
+			"root": "packageA",
+			"entryPagePath": "pages/cases/chat",
+			"desc": "群聊助手 - 提供图片、视频、文件分享等功能",
+			"scopes": ["scope.userLocation"]
+		}
+	],
 	"rendererOptions": {
 		"skyline": {
 			"disableABTest": true,
